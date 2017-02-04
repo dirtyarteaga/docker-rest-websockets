@@ -27,8 +27,9 @@ Then visit the frontend service:
 
 If you like, you can use docker directly using:
 
-    docker build -t express-docker .
-    docker run -it -p 8888:8080 express-docker
+    cd backend
+    docker build -t express-docker-api .
+    docker run -it -p 8888:8080 express-docker-api
 
 You can remove all previous images using:
 
