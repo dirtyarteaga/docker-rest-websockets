@@ -1,0 +1,13 @@
+backend:
+  build: ./backend
+  environment:
+    NODE_ENV: production
+  ports:
+    - '3000:3000'
+
+frontend:
+  build: ./frontend
+  environment:
+    NODE_ENV: production
+  ports:
+    - '3001:3001'

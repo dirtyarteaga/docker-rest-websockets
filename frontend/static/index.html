@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Message API</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+</head>
+<body>
+    <h1>Frontend</h1>
+    <div class="example1">
+        <h2>Websockets</h2>
+        <ul id="messages"></ul>
+        <form action="" id="form">
+            <input id="message" autocomplete="off" />
+            <button>Send</button>
+        </form>
+    </div>
+    <div class="example1">
+        <h2>GET</h2>
+        <p id="get"></p>
+    </div>
+    <script src="https://cdn.socket.io/socket.io-1.2.0.js"></script>
+    <script>
+        var form = document.getElementById('form');
+        var message = document.getElementById('message');
+        var messages = document.getElementById('messages');
+        var io = io('http://localhost:3000');
+        form.addEventListener('submit', function(event) {
+            event.preventDefault();
+            io.emit('message', message.value);
+            message.value = '';
+        });
+        io.on('message', function(text) {
+            messages.innerHTML += '<li>' + text + '</li>';
+        });
+    </script>
+    <script>
+        var get = document.getElementById('get');
+        var xhr = new XMLHttpRequest();
+        xhr.onload = function() {
+            get.innerHTML += xhr.responseText;
+        };
+        xhr.open('GET', 'http://localhost:3000');
+        xhr.send();
+    </script>
+</body>
+</html>

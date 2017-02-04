@@ -1,0 +1,22 @@
+{
+  "author": "kmturley",
+  "license": "ISC",
+  "name": "express-docker-api",
+  "version": "1.0.0",
+  "description": "ExpressJS + Docker",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "keywords": [
+    "express",
+    "docker",
+    "node"
+  ],
+  "dependencies": {
+    "express": "^4.14.1"
+  },
+  "devDependencies": {
+    "nodemon": "^1.11.0"
+  }
+}

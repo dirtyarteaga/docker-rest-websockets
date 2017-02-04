@@ -1,0 +1,19 @@
+backend:
+  build: ./backend
+  command: node_modules/.bin/nodemon index.js
+  environment:
+    NODE_ENV: development
+  ports:
+    - '3000:3000'
+  volumes:
+    - ./backend:/usr/src/app:ro
+
+frontend:
+  build: ./frontend
+  command: node_modules/.bin/nodemon index.js
+  environment:
+    NODE_ENV: development
+  ports:
+    - '3001:3001'
+  volumes:
+    - ./frontend:/usr/src/app:ro
