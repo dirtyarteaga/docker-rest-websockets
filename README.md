@@ -1,9 +1,9 @@
-# express-docker-api
+# docker-rest-websockets (ExpressJS)
 
 Example sending messages between server and client using:
+* Docker
 * ExpressJS
 * Socket.io
-* Docker
 
 ## Installation
 
@@ -28,8 +28,8 @@ Then visit the frontend service:
 If you like, you can use docker directly using:
 
     cd backend
-    docker build -t express-docker-api .
-    docker run -it -p 8888:8080 express-docker-api
+    docker build -t docker-rest-websockets .
+    docker run -it -p 8888:8080 docker-rest-websockets
 
 You can remove all previous images using:
 
