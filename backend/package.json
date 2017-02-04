@@ -1,17 +1,17 @@
 {
   "author": "kmturley",
   "license": "ISC",
-  "name": "express-docker-api",
+  "name": "docker-rest-websockets",
   "version": "1.0.0",
-  "description": "ExpressJS + Docker",
+  "description": "Docker REST WebSockets",
   "main": "index.js",
   "scripts": {
     "start": "node index.js"
   },
   "keywords": [
-    "express",
     "docker",
-    "node"
+    "rest",
+    "websockets"
   ],
   "dependencies": {
     "express": "^4.14.1",
