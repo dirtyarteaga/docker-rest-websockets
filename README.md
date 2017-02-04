@@ -7,18 +7,18 @@ Example sending messages between server and client using:
 
 ## Installation
 
-Install the Amazon Elastic Beanstalk Client
+Build using docker-compose:
 
     docker-compose build
 
 
 ## Usage
 
-Run the server locally using docker-compose:
+Run all the services together using:
 
     docker-compose up
 
-Then visit the address:
+Then visit the frontend service:
 
     http://localhost:3001/
 
