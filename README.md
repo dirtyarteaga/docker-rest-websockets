@@ -1,9 +1,9 @@
-# docker-rest-websockets (ExpressJS)
+# docker-rest-websockets (Python)
 
 Example sending messages between server and client using:
 * Docker
-* ExpressJS
-* Socket.io
+* Python
+* python-websockets
 
 ## Installation
 
@@ -22,6 +22,16 @@ Then visit the frontend service:
 
     http://localhost:3001/
 
+Running the services separately on your local machine:
+
+    cd backend
+    pip install -r requirements
+    python3 server.py
+
+    cd frontend
+    npm install
+    npm start
+
 
 ## Docker (optional)
 
@@ -34,6 +44,7 @@ If you like, you can use docker directly using:
 You can remove all previous images using:
 
     docker images -q | xargs docker rmi -f
+    docker-compose rm
 
 
 ## Directory structure

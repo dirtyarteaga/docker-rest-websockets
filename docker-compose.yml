@@ -1,6 +1,6 @@
 backend:
   build: ./backend
-  command: node_modules/.bin/nodemon index.js
+  command: python server.py
   environment:
     NODE_ENV: development
   ports:
