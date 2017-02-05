@@ -1,9 +1,9 @@
-# docker-rest-websockets (Django)
+# docker-rest-websockets (Flask)
 
 Example sending messages between server and client using:
 * Docker
-* Django
-* django-channels
+* Flask
+* flask_sockets
 
 ## Installation
 
