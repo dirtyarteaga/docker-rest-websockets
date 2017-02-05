@@ -1,6 +1,6 @@
 backend:
   build: ./backend
-  command: python server.py
+  command: python index.py
   environment:
     NODE_ENV: development
   ports:
