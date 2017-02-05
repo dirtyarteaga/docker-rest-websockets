@@ -9,7 +9,7 @@ async def time(websocket, path):
         await websocket.send('Websocket:' + now)
         await asyncio.sleep(random.random() * 3)
 
-start_server = websockets.serve(time, '127.0.0.1', 3000)
+start_server = websockets.serve(time, '0.0.0.0', 3000)
 
 print('websockets.serve localhost:3000');
 
