@@ -1,9 +1,8 @@
-# docker-rest-websockets (ExpressJS)
+# docker-rest-websockets (Django)
 
 Example sending messages between server and client using:
 * Docker
-* ExpressJS
-* Socket.io
+* Django
 
 ## Installation
 
