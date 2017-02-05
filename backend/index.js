@@ -10,7 +10,7 @@ app.use(function(req, res, next) {
 });
 
 // Return json response
-app.get('/', function(req, res) {
+app.get('*', function(req, res) {
     res.json({message: 'JSON: ' + new Date().toUTCString()});
 });
 
