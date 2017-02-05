@@ -3,6 +3,7 @@
 Example sending messages between server and client using:
 * Docker
 * Django
+* django-channels
 
 ## Installation
 
