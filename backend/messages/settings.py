@@ -37,6 +37,7 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'channels',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -109,3 +110,11 @@ STATICFILES_DIRS = [
 
 # uwsgi requires this
 STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
+
+# django-channels
+CHANNEL_LAYERS = {
+    "default": {
+        "BACKEND": "asgiref.inmemory.ChannelLayer",
+        "ROUTING": "messages.routing.channel_routing",
+    },
+}
