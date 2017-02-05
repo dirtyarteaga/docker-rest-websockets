@@ -34,7 +34,7 @@ If you like, you can use docker directly using:
 You can remove all previous images using:
 
     docker images -q | xargs docker rmi -f
-
+    docker-compose rm
 
 ## Directory structure
 
