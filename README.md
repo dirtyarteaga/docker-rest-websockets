@@ -3,7 +3,7 @@
 Example sending messages between server and client using:
 * Docker
 * ExpressJS
-* Socket.io
+* ws
 
 ## Installation
 
