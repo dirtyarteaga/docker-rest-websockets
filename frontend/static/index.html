@@ -20,20 +20,20 @@
         <h2>GET</h2>
         <p id="get"></p>
     </div>
-    <script src="https://cdn.socket.io/socket.io-1.2.0.js"></script>
     <script>
         var form = document.getElementById('form');
         var message = document.getElementById('message');
         var messages = document.getElementById('messages');
-        var io = io('http://localhost:3000');
+        var ws = new WebSocket('ws://localhost:3000/');
         form.addEventListener('submit', function(event) {
             event.preventDefault();
-            io.emit('message', message.value);
+            ws.send(message.value);
             message.value = '';
         });
-        io.on('message', function(text) {
-            messages.innerHTML += '<li>' + text + '</li>';
-        });
+        ws.onmessage = function (event) {
+            console.log('onmessage', event);
+            messages.innerHTML += '<li>' + event.data + '</li>';
+        };
     </script>
     <script>
         var get = document.getElementById('get');
