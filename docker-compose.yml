@@ -1,6 +1,6 @@
 backend:
   build: ./backend
-  command: python manage.py runserver 0.0.0.0:3000
+  command: server.py
   environment:
     NODE_ENV: development
   ports:
