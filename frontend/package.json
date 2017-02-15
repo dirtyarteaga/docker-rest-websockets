@@ -6,7 +6,7 @@
   "description": "Docker REST WebSockets",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "gulp"
   },
   "keywords": [
     "docker",
@@ -14,10 +14,11 @@
     "websockets"
   ],
   "dependencies": {
-    "express": "^4.14.1",
-    "gulp": "^3.9.1"
+    "express": "^4.14.1"
   },
   "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-connect": "^5.0.0",
     "nodemon": "^1.11.0"
   }
 }

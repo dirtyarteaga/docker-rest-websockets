@@ -10,10 +10,12 @@ backend:
 
 frontend:
   build: ./frontend
-  command: node_modules/.bin/nodemon index.js
+  command: npm start
   environment:
     NODE_ENV: development
   ports:
     - '3001:3001'
+    - '35729:35729'
   volumes:
-    - ./frontend:/usr/src/app:ro
+    - ./backend:/usr/src/backend:rw
+    - ./frontend:/usr/src/app:rw

@@ -1,3 +1,7 @@
 node_modules
 *.pyc
 db.sqlite3
+
+
+backend/messages/static
+backend/messages/templates
