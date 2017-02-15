@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>Message API</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+</head>
+<body>
+    <h1>Frontend</h1>
+    <div class="example1">
+        <h2>Websockets</h2>
+        <ul id="messages"></ul>
+        <form action="" id="form">
+            <input id="message" autocomplete="off" />
+            <button>Send</button>
+        </form>
+    </div>
+    <div class="example1">
+        <h2>GET</h2>
+        <p id="get"></p>
+    </div>
+    <script>
+        var form = document.getElementById('form');
+        var message = document.getElementById('message');
+        var messages = document.getElementById('messages');
+        var ws = new WebSocket('ws://localhost:3000/');
+        form.addEventListener('submit', function(event) {
+            event.preventDefault();
+            ws.send(message.value);
+            message.value = '';
+        });
+        ws.onmessage = function (event) {
+            console.log('onmessage', event);
+            messages.innerHTML += '<li>' + event.data + '</li>';
+        };
+    </script>
+    <script>
+        var get = document.getElementById('get');
+        var xhr = new XMLHttpRequest();
+        xhr.onload = function() {
+            get.innerHTML += xhr.responseText;
+        };
+        xhr.open('GET', 'http://localhost:3000/message');
+        xhr.send();
+    </script>
+</body>
+</html>

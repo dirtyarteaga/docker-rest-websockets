@@ -14,7 +14,8 @@
     "websockets"
   ],
   "dependencies": {
-    "express": "^4.14.1"
+    "express": "^4.14.1",
+    "gulp": "^3.9.1"
   },
   "devDependencies": {
     "nodemon": "^1.11.0"
