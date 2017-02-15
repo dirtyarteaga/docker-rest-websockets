@@ -1,4 +1,4 @@
-# docker-rest-websockets (Django)
+# docker-rest-websockets (Django/Livereload)
 
 Example sending messages between server and client using:
 * Docker
@@ -6,6 +6,10 @@ Example sending messages between server and client using:
 * django-channels
 
 ## Installation
+
+Ensure you have Docker installed using the instructions at:
+
+[https://www.docker.com/products/docker](https://www.docker.com/products/docker)
 
 Build using docker-compose:
 
@@ -18,9 +22,9 @@ Run all the services together using:
 
     docker-compose up
 
-Then visit the frontend service:
+Then visit the backend service:
 
-    http://localhost:3001/
+    http://localhost:3000/
 
 
 ## Docker (optional)
@@ -38,8 +42,8 @@ You can remove all previous images using:
 
 ## Directory structure
 
-    backend/                        --> Backend Messages API
-    frontend/                       --> Static frontend files
+    backend/                        --> Backend serving html
+    frontend/                       --> Frontend sources files
 
 
 ## Contact
